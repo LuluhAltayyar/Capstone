@@ -31,6 +31,10 @@ def create_app(test_config=None):
         objects_formatted = [object_name.format() for object_name in selection]
         return objects_formatted[start:end]
 
+    @app.route('/')
+    def hello():
+        return "Welcome to capstone project"
+
     @app.route('/actors', methods=['GET'])
     @requires_auth('get:actors')
     def get_actors(token):
