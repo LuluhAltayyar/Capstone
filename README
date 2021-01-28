@@ -55,19 +55,36 @@ flask run
 The schema for the database and helper methods to simplify API behavior are in models.py:
 - There are two tables created: Movie, and Actor
 
-## Roles
+### Setup Auth0
 
-Create three roles for users under Users & Roles section in Auth0
+1. Create a new Auth0 Account
+2. Select a unique tenant domain
+3. Create a new, single page web application
+4. Create a new API
+    - in API Settings:
+        - Enable RBAC
+        - Enable Add Permissions in the Access Token
+5. Create new API permissions:
+    - `get:actors`
+    - `get:movies`
+    - `post:actors`
+    - `post:movies`
+    - `delete:actors`
+    - `delete:movie`
+    - `edit:actors`
+    - `edit:movies`
+6. Create new roles for:
+    - Casting Assistant
+        - can `get:actors`, `get:movies`
+    - Casting Director
+        - can `get:actors`, `get:movies`, `edit:actors`, `edit:movies`, `post:actors`,  `delete:actors`
+    - Executive Producer
+        - can perform all actions
 
-1- Casting Assistant
-- Can view actors and movies
-2- Casting Director
--All permissions a Casting Assistant has and…
--Add or delete an actor from the database
--Modify actors or movies
-3- Executive Producer
-- All permissions a Casting Director has and…
-- Add or delete a movie from the database
+7. Test your endpoints with [Postman](https://getpostman.com). 
+    - Register 3 users - assign the Casting Assistant role,  Casting Director role, andExecutive Producer role.
+    - Sign into each account and make note of the JWT.
+   
 
 ## API Documentation
 
@@ -271,3 +288,10 @@ eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImR5cEN1b1VCMGFnd3dLU2wyNzBuTyJ9.eyJ
 
 ### Executive_producer Token: 
 eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImR5cEN1b1VCMGFnd3dLU2wyNzBuTyJ9.eyJpc3MiOiJodHRwczovL2Rldi1sdWx1LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZmFhZDI0OWI1YmRhMjAwNjk2NDc4ZDUiLCJhdWQiOiJjYXBzdG9uZUFQSSIsImlhdCI6MTYxMTgxOTUyNywiZXhwIjoxNjExOTA1OTI3LCJhenAiOiJybWI2WHhTd21HSkRaR3pkMHdpUFhMTTRQNzlaeWhsbyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZSIsImVkaXQ6YWN0b3JzIiwiZWRpdDptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.PJCvZYTztZzTYDODM4_3uie09yjszU2fBBLNX9aJfWXj46y64uR_i5T58hORoIvQ4LmtjxzSjH94ohzchm1zcsqnED-9B9ltx70I8L3c5mltt5dLy-_Nl-PA5NLCG0pkZr_xD0WzMsDvGhm6beKegrWCyjblwcU7hkeCYY7jhi_LUa5JEoa-x28yeTgd7nQHIGKGAPPAxiZRVlxNrzuxvfqA1VA9LVmTYglzU9MmXoQrGTOfkqydWMb7zYSZsXidOBwxZWxmBznW8_qeGD_I6_J31ycubKXuqO_xkBK3jNWoQg4zdIoiRJnGdeelFAHC0PaX23Rwy1XkjH_rOx5DeA
+
+
+## Heroku
+
+```
+https://hidden-mesa-84288.herokuapp.com/
+```
