@@ -6,14 +6,14 @@ from flask_migrate import Migrate
 from sqlalchemy import Column, String, Integer, create_engine, DateTime, ForeignKey
 
 
-# from config import database_setup
+# from config import database_setup "postgres://postgres:6541@localhost:5432/capstone"
 
-database_name = "capstone"
-""" database_path = "postgres://{}:{}@{}/{}".format('postgres',
-                                                '6541',
-                                                'localhost:5432',
-                                                database_name) """
-database_path = os.environ['DATABASE_URL']
+#database_name = "capstone"
+#database_path = "postgres://{}:{}@{}/{}".format('postgres',
+#                                               '6541',
+#                                              'localhost:5432',
+#                                             database_name)
+database_path = os.environ.get('DATABASE_URL')
 
 db = SQLAlchemy()
 
