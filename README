@@ -1,0 +1,275 @@
+# FSND: Capstone Project
+
+## About
+This project is simply a workspace for practicing and showcasing different set of skills related with web development. 
+These include data modelling, API design, authentication and authorization and cloud deployment. 
+# FSND: Capstone Project
+
+## Key Dependencies 
+
+- [Flask](http://flask.pocoo.org/)  is a lightweight backend microservices framework. Flask is required to handle requests and responses.
+
+- [SQLAlchemy](https://www.sqlalchemy.org/) and [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/) are libraries to handle the lightweight sqlite database. Since we want you to focus on auth, we handle the heavy lift for you in `./src/database/models.py`. We recommend skimming this code first so you know how to interface with the Drink model.
+
+- [jose](https://python-jose.readthedocs.io/en/latest/) JavaScript Object Signing and Encryption for JWTs. Useful for encoding, decoding, and verifying JWTS.
+
+- [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
+
+
+
+## Start Project locally
+
+To start and run the local development server:
+
+#### Python 3.7
+Follow instructions to install the latest version of python for your platform in the [python docs]
+(https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
+
+
+#### Initialize and activate a virtualenv:
+
+```
+virtualenv env
+source env/Scripts/activate
+```
+
+####  Install the dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+## Running the server
+
+To run the server, execute:
+```
+source setup.sh
+export FLASK_APP=app.py
+export FLASK_ENV=development
+export FLASK_DEBUG=True
+flask run
+```
+
+## DATA MODELING:
+#### models.py
+The schema for the database and helper methods to simplify API behavior are in models.py:
+- There are two tables created: Movie, and Actor
+
+## Roles
+
+Create three roles for users under Users & Roles section in Auth0
+
+1- Casting Assistant
+- Can view actors and movies
+2- Casting Director
+-All permissions a Casting Assistant has and…
+-Add or delete an actor from the database
+-Modify actors or movies
+3- Executive Producer
+- All permissions a Casting Director has and…
+- Add or delete a movie from the database
+
+## API Documentation
+
+### Error Handling
+
+Errors are returned as JSON objects in the following format:
+
+  {
+      "error": 404,
+      "massage": "resource not found",
+      "seccess": false
+  }
+
+The API will return three error types when requests fail:
+400: Bad request
+401: invalid header
+403: permission error
+404: Resource not found
+422: Unprocessable
+405: "Method Not Allowed"
+
+### Endpoints
+
+#### GET/movies
+- Get all movies
+- Example response:
+```
+{
+    "actors": [
+        {
+            "actors": [
+                {
+                    "age": 34,
+                    "gender": "male",
+                    "id": 2,
+                    "movie_id": 2,
+                    "name": "Ali"
+                },
+                {
+                    "age": 34,
+                    "gender": "male",
+                    "id": 6,
+                    "movie_id": 2,
+                    "name": "Jon"
+                }
+            ],
+            "id": 2,
+            "release_date": "Fri, 07 Aug 2015 05:00:01 GMT",
+            "title": "Ali Start"
+        }
+    ],
+    "success": true
+}
+```
+
+#### GET/actors
+- Get all actors
+- Example response:
+```
+{
+    "actors": [
+        {
+            "age": 34,
+            "gender": "male",
+            "id": 2,
+            "movie_id": 2,
+            "name": "Ali"
+        },
+        {
+            "age": 34,
+            "gender": "male",
+            "id": 6,
+            "movie_id": 2,
+            "name": "Jon"
+        },
+        {
+            "age": 22,
+            "gender": "female",
+            "id": 7,
+            "movie_id": null,
+            "name": "Sarah"
+        }
+    ],
+    "success": true
+}
+```
+
+#### POST/actors
+- Creates a new actor.
+- Example response:
+```
+{
+    "message": 8,
+    "success": true
+}
+```
+
+#### POST/movies
+- Creates a new movie.
+- Example response:
+```
+{
+    "message": 4,
+    "success": true
+}
+```
+
+#### PATCH/actors/6
+- Updates the actor where <actor_id>=6
+- Example response:
+```
+"actor": [
+        {
+            "age": 33,
+            "gender": "male",
+            "id": 6,
+            "movie_id": 2,
+            "name": "WWW"
+        }
+    ],
+    "success": true,
+    "updated": 6
+}
+```
+#### PATCH/movies/2
+- Updates the movie where <movie_id>=2
+- Example response:
+```
+{
+    "actor": [
+        {
+            "actors": [
+                {
+                    "age": 34,
+                    "gender": "male",
+                    "id": 2,
+                    "movie_id": 2,
+                    "name": "Ali"
+                },
+                {
+                    "age": 33,
+                    "gender": "male",
+                    "id": 6,
+                    "movie_id": 2,
+                    "name": "WWW"
+                }
+            ],
+            "id": 2,
+            "release_date": "Fri, 07 Aug 2015 05:00:01 GMT",
+            "title": "Ali Start"
+        }
+    ],
+    "success": true,
+    "updated": 2
+}
+```
+
+#### DELETE /movies/int:movie_id
+- Delete the movie where <movie_id>=6
+- Example response:
+```
+{
+    "deleted": 6,
+    "success": true
+}
+```
+#### DELETE/actors/int:actor_id
+-Delete the movie where <actor_id>=6
+- Example response:
+```
+{
+    "deleted": 6,
+    "success": true
+}
+
+```
+
+
+## Testing
+For testing the backend, run the following commands:
+CEARTE DATABASE capstone_test;
+python test_app.py
+```
+$ python test_app.py
+
+.{'message': 7, 'success': True}
+...............
+----------------------------------------------------------------------
+Ran 16 tests in 13.557s
+
+OK
+
+```
+
+
+## Token
+### Casting_assistant Token:
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZjTzJnb1VXc2s3QTh4RUhlY3U5RCJ9.eyJpc3MiOiJodHRwczovL21zLWZzbmQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmYjEyZDYxZGZiYjljMDA2ODI1ZjA2YSIsImF1ZCI6InN0dWRlbnQiLCJpYXQiOjE2MTE3NDg5MzgsImV4cCI6MTYxMTgzNTMzOCwiYXpwIjoiQXJnaVh3dlNJOURKR0lwOG9USjNnR0g1RHpXOVExaVoiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpjb3Vyc2VzIiwiZGVsZXRlOnN0dWRlbnQtaW5mbyIsImdldDpjb3Vyc2VzIiwiZ2V0OnN0dWRlbnQtaW5mbyIsInBhdGNoOmNvdXJzZSIsInBhdGNoOnN0dWRlbnQtaW5mbyIsInBvc3Q6Y291cnNlcyIsInBvc3Q6c3R1ZGVudC1pbmZvIl19.QD_k1GOL4cy3KVePgEL5WfoAH3EhiCskE2bdu40HC3XE36hL_vTaGFROhyYGV3DmjL0m9hMI0PEO7q0WRp4VbyKml2LUPwQFT78qFLU-eFC6Qs5GjZX5aCIajP-ARBWuDHhzGlLHJLhlSMhZN00fP54mUdgoPbzSsY3f4WbmajrOYSSi6Rg1X59vDoUw_P6n6S8ZVjKvHfMlc-TKIXNeyH5ujsJ50a33hzXKPbJ2KLNbvwrgpON-KJb_ne3tuZEyfDL3Rd0hux8ab9vCuKUa_8T8t0m03yK-mjcu09-l9UAbMiOsoN0OsDacn8k0ZcTkP36_OFODKH9djE5O5DpPlg
+
+### Casting_director Token: 
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZjTzJnb1VXc2s3QTh4RUhlY3U5RCJ9.eyJpc3MiOiJodHRwczovL21zLWZzbmQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwMGRiZWFhMzQwMjg1MDA3MTYwNDA2MCIsImF1ZCI6InN0dWRlbnQiLCJpYXQiOjE2MTE3NDkwNTMsImV4cCI6MTYxMTgzNTQ1MywiYXpwIjoiQXJnaVh3dlNJOURKR0lwOG9USjNnR0g1RHpXOVExaVoiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpzdHVkZW50LWluZm8iLCJnZXQ6Y291cnNlcyIsImdldDpzdHVkZW50LWluZm8iLCJwYXRjaDpzdHVkZW50LWluZm8iLCJwb3N0OnN0dWRlbnQtaW5mbyJdfQ.OrMiU8y-TNGz1PBcGz9w5etlO3PdHP-Cux9w3dNIdo1Q8i7QeB8EhlZe9HRr50_Ug2e_iQ8BIZCvmHRJzZY5ngaoEVqPtlfLBQuTpkyaiADMkuTIYwHSiWpxZ7kb-BfH1shq27ix1Tur35TAfPbqWqya0JX_D4TtsIi2A16G2_GIoZOeuyjobn2lBWX5_jiY0kLsQmGY5r-f1TL8p3cb4OonpU9h0Wo9-ZwXJ80WI2dGSdhhRI9uCa44E1U8yN2J-il7Kz5JYfNQ7u1_cFTgPrG-18kXXEY4i-BMHc47zG7jNTs0icFLG-UMUqd6tGXh-Ae1K6A7FSLlD3z7hdDtjA
+
+
+### Executive_producer Token: 
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZjTzJnb1VXc2s3QTh4RUhlY3U5RCJ9.eyJpc3MiOiJodHRwczovL21zLWZzbmQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwMGRiZWFhMzQwMjg1MDA3MTYwNDA2MCIsImF1ZCI6InN0dWRlbnQiLCJpYXQiOjE2MTE3NDkwNTMsImV4cCI6MTYxMTgzNTQ1MywiYXpwIjoiQXJnaVh3dlNJOURKR0lwOG9USjNnR0g1RHpXOVExaVoiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpzdHVkZW50LWluZm8iLCJnZXQ6Y291cnNlcyIsImdldDpzdHVkZW50LWluZm8iLCJwYXRjaDpzdHVkZW50LWluZm8iLCJwb3N0OnN0dWRlbnQtaW5mbyJdfQ.OrMiU8y-TNGz1PBcGz9w5etlO3PdHP-Cux9w3dNIdo1Q8i7QeB8EhlZe9HRr50_Ug2e_iQ8BIZCvmHRJzZY5ngaoEVqPtlfLBQuTpkyaiADMkuTIYwHSiWpxZ7kb-BfH1shq27ix1Tur35TAfPbqWqya0JX_D4TtsIi2A16G2_GIoZOeuyjobn2lBWX5_jiY0kLsQmGY5r-f1TL8p3cb4OonpU9h0Wo9-ZwXJ80WI2dGSdhhRI9uCa44E1U8yN2J-il7Kz5JYfNQ7u1_cFTgPrG-18kXXEY4i-BMHc47zG7jNTs0icFLG-UMUqd6tGXh-Ae1K6A7FSLlD3z7hdDtjA

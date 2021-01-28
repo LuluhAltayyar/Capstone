@@ -1,0 +1,11 @@
+Collecting python-jose
+  Using cached python_jose-3.2.0-py2.py3-none-any.whl (26 kB)
+Requirement already satisfied: six<2.0 in c:\users\loloo\fsnd\projects\capstone\starter\env\lib\site-packages (from python-jose) (1.15.0)
+Collecting ecdsa<0.15
+  Using cached ecdsa-0.14.1-py2.py3-none-any.whl (79 kB)
+Collecting pyasn1
+  Using cached pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+Collecting rsa
+  Downloading rsa-4.7-py3-none-any.whl (34 kB)
+Installing collected packages: pyasn1, rsa, ecdsa, python-jose
+Successfully installed ecdsa-0.14.1 pyasn1-0.4.8 python-jose-3.2.0 rsa-4.7

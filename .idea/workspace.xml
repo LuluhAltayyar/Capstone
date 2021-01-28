@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="278f9f39-c390-4d7d-af0d-5db013c22eb3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../01_fyyur/starter_code/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../01_fyyur/starter_code/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../01_fyyur/starter_code/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../01_fyyur/starter_code/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../01_fyyur/starter_code/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../01_fyyur/starter_code/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../01_fyyur/starter_code/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../01_fyyur/starter_code/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../01_fyyur/starter_code/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../01_fyyur/starter_code/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../01_fyyur/starter_code/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../01_fyyur/starter_code/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../01_fyyur/starter_code/templates/forms/edit_artist.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../01_fyyur/starter_code/templates/forms/edit_artist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../01_fyyur/starter_code/templates/forms/edit_venue.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../01_fyyur/starter_code/templates/forms/edit_venue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../01_fyyur/starter_code/templates/forms/new_artist.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../01_fyyur/starter_code/templates/forms/new_artist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../01_fyyur/starter_code/templates/forms/new_venue.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../01_fyyur/starter_code/templates/forms/new_venue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02_trivia_api/starter/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_trivia_api/starter/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02_trivia_api/starter/backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_trivia_api/starter/backend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02_trivia_api/starter/backend/flaskr/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_trivia_api/starter/backend/flaskr/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02_trivia_api/starter/backend/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_trivia_api/starter/backend/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02_trivia_api/starter/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_trivia_api/starter/backend/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02_trivia_api/starter/backend/test_flaskr.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_trivia_api/starter/backend/test_flaskr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03_coffee_shop_full_stack/starter_code/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../03_coffee_shop_full_stack/starter_code/backend/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03_coffee_shop_full_stack/starter_code/backend/src/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../03_coffee_shop_full_stack/starter_code/backend/src/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03_coffee_shop_full_stack/starter_code/backend/src/auth/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../03_coffee_shop_full_stack/starter_code/backend/src/auth/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03_coffee_shop_full_stack/starter_code/backend/src/database/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../03_coffee_shop_full_stack/starter_code/backend/src/database/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03_coffee_shop_full_stack/starter_code/backend/src/database/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../03_coffee_shop_full_stack/starter_code/backend/src/database/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03_coffee_shop_full_stack/starter_code/frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../03_coffee_shop_full_stack/starter_code/frontend/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1ncP46ER4CfALQncTFI5RclYpLS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="278f9f39-c390-4d7d-af0d-5db013c22eb3" name="Default Changelist" comment="" />
+      <created>1611686212038</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611686212038</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1611686254594">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1611686254594" />
+    <state x="337" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1611686215877">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="337" y="166" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1611686215877" />
+  </component>
+</project>
